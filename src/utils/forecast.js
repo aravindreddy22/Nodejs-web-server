@@ -11,9 +11,10 @@ const forcast=(latitude,longitude,callback)=>{
         } if(body.error){
             callback('unable to find the location, try another location');
         } else{
+            console.log(body);
             callback(undefined,{
                 description:body.current.weather_descriptions[0],
-                weather:"It is currently "+body.current.temperature + "it is feels like "+ body.current.feelslike
+                weather:body.weather_descriptions +", It is currently "+body.current.temperature + " it is feels like "+ body.current.feelslike
             });
         }
     });
