@@ -1,10 +1,10 @@
 console.log('client side java script file is loaded ');
 
-fetch('http://puzzle.mead.io/puzzle').then((respone) => {
-    respone.json().then((data) => {
-        console.log(data);
-    });
-});
+// fetch('http://puzzle.mead.io/puzzle').then((respone) => {
+//     respone.json().then((data) => {
+//         console.log(data);
+//     });
+// });
 
 
 
@@ -23,7 +23,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.textContent='';
 
     //calling from the client side.
-    fetch('http://localhost:3000/weather?address='+location).then(forcastData => {
+    fetch('/weather?address='+location).then(forcastData => {
         forcastData.json().then(data => {
             if (data.error) {
                 messageOne.textContent=data.error;
