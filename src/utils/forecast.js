@@ -14,7 +14,7 @@ const forcast=(latitude,longitude,callback)=>{
             console.log(body);
             callback(undefined,{
                 description:body.current.weather_descriptions[0],
-                weather:body.current.weather_descriptions +", It is currently "+body.current.temperature + " it is feels like "+ body.current.feelslike
+                weather:body.current.weather_descriptions +", It is currently "+body.current.temperature + " it is feels like "+ body.current.feelslike +". The humidity is :"+body.current.humidity
             });
         }
     });
