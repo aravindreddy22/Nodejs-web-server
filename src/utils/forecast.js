@@ -13,7 +13,7 @@ const forcast=(latitude,longitude,callback)=>{
         } else{
             callback(undefined,{
                 description:body.current.weather_descriptions[0],
-                weather:"It is currently,"+body.current.temperature + "it is feels like,"+ body.current.feelslike
+                weather:"It is currently "+body.current.temperature + "it is feels like "+ body.current.feelslike
             });
         }
     });
